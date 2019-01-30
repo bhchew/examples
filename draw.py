@@ -14,20 +14,7 @@ def _save_image(image, matchs, paths):
     print img_height
     draw = ImageDraw.Draw(img)
 
-    # # Draw custom global region/area
-    # if self._area != [0, 0, 1, 1]:
-    #     draw_box(draw, self._area,
-    #              img_width, img_height, "Detection Area", (0, 255, 255))
-
     for cat, values in matchs.items():
-
-        # # Draw custom category regions/areas
-        # if (cat in self._category_areas
-        #     and self._category_areas[cat] != [0, 0, 1, 1]):
-        #     label = "{} Detection Area".format(cat.capitalize())
-        #     draw_box(
-        #         draw, self._category_areas[cat], img_width,
-        #         img_height, label, (0, 255, 0))
 
         # Draw detected objects
         for instance in values:
